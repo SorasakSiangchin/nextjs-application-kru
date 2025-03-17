@@ -1,0 +1,1 @@
+GET http://localhost:9999/api/category HTTP/1.1

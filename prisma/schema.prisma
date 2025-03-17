@@ -1,0 +1,42 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = "sqlserver://localhost:1433;database=test-prisma;initialCatalog=test;integratedSecurity=true;trustServerCertificate=true;"
+}
+
+model User {
+  id           String  @id @default(uuid())
+  firstName    String
+  lastName     String
+  email        String
+  passwordHash String // never store passwords as clear text!!!
+  age          Int?
+  roleName     String?
+  roleCode     String?
+}
+
+model Product {
+  id         String   @id @default(uuid())
+  name       String
+  price      Int
+  stock      Int
+  imageUrl   String?
+  detail     String?
+  categoryId String
+  category   Category @relation(fields: [categoryId], references: [id])
+}
+
+model Category {
+  id       String    @id @default(uuid())
+  name     String
+  products Product[]
+}

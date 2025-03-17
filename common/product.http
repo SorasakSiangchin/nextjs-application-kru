@@ -1,0 +1,39 @@
+
+GET http://localhost:9999/api/product?categoryId=2&searchName=&sortPrice=  HTTP/1.1
+Content-Type: application/json
+
+###
+
+POST http://localhost:9999/api/product HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "product4",
+  "price": 200,
+  "stock": 20,
+  "categoryId": "4",
+  "imageUrl": "https://media.istockphoto.com/id/1461354270/vector/3d-render-of-thank-you-colorful-typography-banner.jpg?s=612x612&w=0&k=20&c=_dbQZiDPNUhfUidzXansY6_P2At8NV7hb08KKgmgdjo=" ,
+  "detail": "detail"
+}
+
+###
+
+PUT http://localhost:9999/api/product/e197b678-a56f-478e-9481-bcf6bf8222e3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "product3",
+  "price": 300,
+  "stock": 32,
+  "categoryId": "1"
+}
+
+###
+
+DELETE http://localhost:3000/api/product/a0561b87-c366-406b-9544-a1ccbadfaad3 HTTP/1.1
+Content-Type: application/json
+
+###
+
+GET http://localhost:9999/api/product/e197b678-a56f-478e-9481-bcf6bf8222e3 HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/user/login HTTP/1.1
+Content-Type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "123456"
+}
+
+###
+
+POST http://localhost:9999/api/user/register HTTP/1.1
+Content-Type: application/json
+
+{
+  "firstName": "arm",
+  "lastName": "kung",
+  "email": "arm5@gmail.com" ,
+  "password": "123456" ,
+  "age" : "23"
+}
+
+###
+
+GET http://localhost:9999/api/user/ HTTP/1.1
