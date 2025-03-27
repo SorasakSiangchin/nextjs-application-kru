@@ -1,7 +1,8 @@
 import React from "react";
-import Header from "../_components/layout/Header";
-import Footer from "../_components/layout/Footer";
+
 import { Metadata } from "next";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 type Props = {
   children: React.ReactNode;

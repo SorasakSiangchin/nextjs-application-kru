@@ -1,9 +1,7 @@
 "use client";
-
 import { TextField } from "@mui/material";
-import React, { FC, useEffect, useState } from "react";
+import { FC } from "react";
 
-import { useDebounce } from "use-debounce";
 import SearchIcon from "@mui/icons-material/Search";
 
 type Props = {
@@ -12,10 +10,6 @@ type Props = {
 };
 
 const InputSearch: FC<Props> = ({ searchName, setSearchName }) => {
-  const [debouncedQuery] = useDebounce(searchName, 300);
-
-  // useEffect(() => {}, [debouncedQuery]);
-
   return (
     <div className="relative">
       <TextField

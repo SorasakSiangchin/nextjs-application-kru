@@ -1,4 +1,4 @@
-import StockAddPage from "@/app/_components/page/stock/StockAddPage";
+import StockAddPage from "@/components/page/stock/StockAddPage";
 import { Metadata } from "next";
 
 export const metaData: Metadata = {

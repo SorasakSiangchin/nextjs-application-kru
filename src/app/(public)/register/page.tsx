@@ -1,5 +1,5 @@
 import { getUser } from "@/app/_actions/userAction";
-import RegisterPage from "@/app/_components/page/register/RegisterPage";
+import RegisterPage from "@/components/page/register/RegisterPage";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";

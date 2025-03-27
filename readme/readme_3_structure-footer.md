@@ -1,7 +1,7 @@
 ### footer html
 
 ```html
-<footer className="bg-gray-50 fixed bottom-0 w-full border">
+<footer className="bg-gray-50 border mt-auto ">
   <div className="mx-auto max-w-screen-xl px-3 py-8 sm:px-6 lg:px-8">
     <div className="sm:flex sm:items-center sm:justify-between">
       <p

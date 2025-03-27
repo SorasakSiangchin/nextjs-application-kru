@@ -31,7 +31,7 @@ export async function middleware(request: NextRequest) {
   });
 }
 
-// config คืออะไร?
+// config ทำหน้าที่กำหนด เส้นทาง (routes) ที่ Middleware จะทำงาน
 export const config = {
   // => "/", "/shop/:path*", "/stock/:path*", "/member/:path*"
   matcher: ["/((?!api|_next/static|_next/image|favicon.ico|login|register).*)"],

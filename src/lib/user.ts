@@ -5,11 +5,17 @@ import { RegisterRequest } from "@/interfaces/user/registerRequest";
 import { UserData } from "@/interfaces/user/userData";
 
 const GetUsers = async (): Promise<UserData[]> => {
-  const users = await db.user.findMany();
+  const users = await db.user.findMany({
+    omit: {
+      passwordHash: true,
+    },
+  });
 
   return users as UserData[];
 };
 
+// ค้นหา user ถ้าไม่มี => ส่ง Error
+// compare password (ที่กรอก , hash ในฐานข้อมูล)
 const Login = async (data: LoginRequest): Promise<UserData> => {
   const users = await db.user.findMany({
     where: { email: data.email },
@@ -28,6 +34,8 @@ const Login = async (data: LoginRequest): Promise<UserData> => {
   throw "รหัสผ่านไมู่กต้อง!";
 };
 
+// ค้นหา user ถ้ามี => ส่ง Error
+// นำ password มาผ่านการ hash
 const Register = async (user: RegisterRequest) => {
   const users = await db.user.findMany({ where: { email: user.email } });
   if (users.length > 0) {

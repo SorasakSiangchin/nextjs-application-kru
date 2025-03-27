@@ -32,5 +32,8 @@ main()
   .catch(async (e) => {
     console.error(e); // แสดง error ถ้ามี
     await prisma.$disconnect();
+
+    // เป็นคำสั่งที่ใช้ใน Node.js เพื่อทำการ หยุดการทำงานของโปรแกรม
+    // 1 => โดยมีข้อผิดพลาด
     process.exit(1); // exit process ด้วย error code
   });

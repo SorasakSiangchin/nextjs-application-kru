@@ -26,8 +26,6 @@ export async function GET(request: NextRequest) {
     sortPrice,
   });
 
-  // console.log("products : ", products);
-
   return NextResponse.json(products);
 }
 

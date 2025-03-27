@@ -1,5 +1,5 @@
 import { getUser } from "@/app/_actions/userAction";
-import LoginPage from "@/app/_components/page/login/LoginPage";
+import LoginPage from "@/components/page/login/LoginPage";
 import { Metadata } from "next";
 import { redirect } from "next/navigation";
 import React from "react";

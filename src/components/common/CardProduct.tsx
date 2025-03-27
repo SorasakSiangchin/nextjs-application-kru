@@ -40,10 +40,6 @@ const CardProduct: FC<Props> = ({ product }) => {
             ฿ {product.price}
           </Typography>
         </CardContent>
-        {/* <CardActions>
-        <Button size="small">Share</Button>
-        <Button size="small">Learn More</Button>
-      </CardActions> */}
       </Card>
     </Box>
   );

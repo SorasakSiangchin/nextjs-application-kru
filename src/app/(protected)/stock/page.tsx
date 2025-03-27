@@ -1,4 +1,4 @@
-import StockPage from "@/app/_components/page/stock/StockPage";
+import StockPage from "@/components/page/stock/StockPage";
 import { Metadata } from "next";
 import React from "react";
 

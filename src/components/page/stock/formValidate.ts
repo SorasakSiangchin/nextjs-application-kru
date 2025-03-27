@@ -8,7 +8,6 @@ import { z } from "zod";
 const FileSchema = z.instanceof(File).nullable();
 
 const formValidate = z.object({
-  id: z.string(),
   name: z.string().min(1, { message: "กรุณาใส่ชื่อ" }),
   price: z.number().min(1, { message: "กรุณาใส่ราคา" }),
   stock: z.number().min(1, { message: "กรุณาใส่จำนวนคลัง" }),

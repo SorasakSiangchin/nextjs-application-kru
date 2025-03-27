@@ -27,7 +27,12 @@ const InputSelectCategory: FC<Props> = ({
       options={categories}
       sx={{ width: 300 }}
       renderInput={(params) => (
-        <TextField {...params} size="small" label="ประเภทสินค้า" />
+        <TextField
+          {...params}
+          size="small"
+          label="ประเภทสินค้า"
+          className="w-full"
+        />
       )}
     />
   );

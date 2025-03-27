@@ -49,6 +49,8 @@ const StockAddPage = () => {
     resolver: zodResolver(formValidate),
   });
 
+  console.log("errors : ", errors);
+
   const onSubmit = handleSubmit(async (value) => {
     console.log("value : ", value);
 

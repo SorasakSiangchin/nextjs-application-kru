@@ -1,5 +1,5 @@
 import { fetchProduct } from "@/app/_actions/productAction";
-import StockEditPage from "@/app/_components/page/stock/StockEditPage";
+import StockEditPage from "@/components/page/stock/StockEditPage";
 import { ProductData } from "@/interfaces/product/product";
 import { Metadata } from "next";
 import React from "react";

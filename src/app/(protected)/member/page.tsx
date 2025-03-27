@@ -1,4 +1,4 @@
-import MemberPage from "@/app/_components/page/member/MemberPage";
+import MemberPage from "@/components/page/member/MemberPage";
 import { Metadata } from "next";
 import React from "react";
 
