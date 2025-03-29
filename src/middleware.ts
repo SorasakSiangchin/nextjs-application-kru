@@ -3,7 +3,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { JWT_COOKIE } from "./app/utils/constant";
 import { UserData } from "./interfaces/user/userData";
 
-// middleware file คืออะไร?
 export async function middleware(request: NextRequest) {
   const cookieStore = await cookies();
 

@@ -20,7 +20,6 @@ const InputSelectSort: FC<Props> = ({ sortPrice, setSortPrice, dataSort }) => {
       getOptionKey={(option) => option.value}
       onChange={(_, value) => setSortPrice((value?.value as any) ?? "asc")}
       options={dataSort}
-      sx={{ width: 150 }}
       renderInput={(params) => (
         <TextField {...params} size="small" label="เรียงราคา" />
       )}

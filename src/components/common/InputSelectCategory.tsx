@@ -25,7 +25,6 @@ const InputSelectCategory: FC<Props> = ({
       getOptionKey={(option) => option.id}
       onChange={(_, value) => setCategoryId(value?.id ?? "")}
       options={categories}
-      sx={{ width: 300 }}
       renderInput={(params) => (
         <TextField
           {...params}
