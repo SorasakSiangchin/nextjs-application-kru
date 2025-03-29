@@ -26,10 +26,10 @@ export async function login(
     const expirationTime = new Date(Date.now() + JWT_DURATION);
 
     // create token
-    const token = await new SignJWT({ ...data })
-      .setProtectedHeader({ alg: "HS256" })
-      .setExpirationTime(expirationTime)
-      .sign(JWT_SECRET);
+    const token = await new SignJWT({ ...data }) // payload (ข้อมูลภายใน token)
+      .setProtectedHeader({ alg: "HS256" }) // HS256 เป็นอัลกอริทึมเข้ารหัส
+      .setExpirationTime(expirationTime) // กำหนดเวลาหมดอายุของ token
+      .sign(JWT_SECRET); // เข้ารหัส JWT (JSON Web Token) ด้วยคีย์ลับ
 
     const cookiesSession = await cookies();
 
@@ -42,8 +42,8 @@ export async function login(
       }),
       {
         secure: true,
-        sameSite: "strict",
-        path: "/",
+        sameSite: "strict", // ป้องกันการส่ง Cookie ไปกับ request ข้ามไซต์ (เว็บไซต์หนึ่งพยายามเรียกใช้ทรัพยากรหรือส่งคำขอไปยังอีกเว็บไซต์หนึ่ง) (ป้องกัน CSRF)
+        path: "/", // Cookie ใช้ได้ทุก path ของเว็บไซต์
       }
     );
 

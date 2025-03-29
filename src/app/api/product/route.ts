@@ -14,11 +14,11 @@ import { v4 as uuidv4 } from "uuid"; // ติดตั้ง uuid ด้วย:
 export async function GET(request: NextRequest) {
   const searchParams = request.nextUrl.searchParams;
 
-  const categoryId = searchParams.get("categoryId") || undefined;
+  const categoryId = searchParams.get("categoryId") as any;
 
-  const searchName = searchParams.get("searchName") || undefined;
+  const searchName = searchParams.get("searchName") as any;
 
-  const sortPrice = searchParams.get("sortPrice") || "asc";
+  const sortPrice = searchParams.get("sortPrice") ?? "asc";
 
   const products = await productService.getProducts({
     categoryId,
